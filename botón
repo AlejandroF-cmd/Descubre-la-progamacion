@@ -1,0 +1,24 @@
+void main() {
+  animate(ejecutar);
+}
+void ejecutar (){
+  imagen();
+  control();
+}
+void imagen(){
+  background(255,255,255);
+  rect(120,120,80,80);
+}
+void control(){
+  println("X: " + mouseX);
+  println("Y: " + mouseY);
+  if (mousePressed)
+  if (mouseX >120 && mouseX < 200)
+    if (mouseY >120 && mouseY < 200)
+    	if (mousePressed) {
+    		if (mouseButton == LEFTBUTTON){
+           background(255,0,0);
+          rect(120,120,80,80);
+    }
+  }  
+}
