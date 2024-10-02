@@ -1,6 +1,5 @@
-int x= 160;
-int y= 160;
-
+int x= 130;
+int y= 130;
 void main () {
   animate (ejecutar);
 }
@@ -9,11 +8,39 @@ void ejecutar(){
 	controles();
 }
 void player (){
-  background(153,153,153);
-  ellipse(x,y,10,15);
+  image ("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW0q1xK7ihQaXh--N4j-x7BZMR3Vx3nMs2hw&s",0,0,320,320);
+  image("http://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr4Gx5IwRzZvlA6HJKhsCgeFX2DQJNYVtA8A&s",x,y,50,50);
 }
 void controles(){
+  if (y<0){
+    y = 130;
+  }
+   if (y>320){
+    y = 130;
+  }
+   if (x<0){
+    x = 130;
+  }
+  if (x>320){
+    x = 130;
+  }
+   if (y==0){
+    y = 130;
+  }
   if (keyPressed && key=="up"){
-    print("hoola");
-    y = y -1;
-}}
+    println("arriba");
+    y = y -2;
+  }
+  if (keyPressed && key=="down"){
+    println("abajo");
+    y = y +2;
+  }
+   if (keyPressed && key=="right"){
+    println("derecha");
+    x = x +2;
+  }
+  if (keyPressed && key=="left"){
+    println("izquierda");
+    x = x -2;
+  }
+}
