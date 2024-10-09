@@ -1,0 +1,21 @@
+int x = millis()/1000;
+
+void main(){
+  animate (reloj);
+  
+}
+
+void reloj(){
+  println (millis()/1000);
+  text("5 segundos hasta el cambio",40,50);
+	int a = millis()/1000 - x;
+  println ("a = "+a);
+  if (a>=5){
+    x = millis()/1000;
+    a = x-millis()/1000;
+		background(random(256),random(256),random(256));
+    
+    
+}}
+
+
