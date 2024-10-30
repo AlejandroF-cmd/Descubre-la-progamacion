@@ -14,17 +14,18 @@ void player (){
 void controles(){
   if (y<0){
     y = 130;
+    x = 130;
   }
    if (y>320){
     y = 130;
+    x = 130;
   }
    if (x<0){
     x = 130;
+    y = 130;
   }
   if (x>320){
     x = 130;
-  }
-   if (y==0){
     y = 130;
   }
   if (keyPressed && key=="up"){
