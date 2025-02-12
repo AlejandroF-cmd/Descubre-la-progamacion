@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1rwugf47b3sr"]
+
+[ext_resource type="Script" path="res://código/menú_p.gd" id="1_itshx"]
+[ext_resource type="Script" path="res://código/jugar_button.gd" id="2_pbvpe"]
+[ext_resource type="Texture2D" uid="uid://dasasfwfpmxou" path="res://imágenes/faith-spark-background1.jpg" id="3_i7xku"]
+
+[node name="MenúP" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_itshx")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.069
+anchor_top = 0.156
+anchor_right = 0.069
+anchor_bottom = 0.156
+offset_left = -79.488
+offset_top = -101.088
+offset_right = -39.488
+offset_bottom = -61.088
+
+[node name="JugarButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Jugar"
+script = ExtResource("2_pbvpe")
+
+[node name="OpcionesButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Opciones"
+
+[node name="SalirButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Salir"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+texture = ExtResource("3_i7xku")
+expand_mode = 1
+stretch_mode = 4
+
+[connection signal="pressed" from="VBoxContainer/JugarButton" to="." method="_on_jugar_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/OpcionesButton" to="." method="_on_opciones_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/SalirButton" to="." method="_on_salir_button_pressed"]
