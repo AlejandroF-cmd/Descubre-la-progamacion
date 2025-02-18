@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://cqjaw7d2bykdb"]
+
+[ext_resource type="Texture2D" uid="uid://kyk2m5mxa5hu" path="res://imágenes/monedasprites.png" id="1_2q7pt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_mcyhs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5057l"]
+atlas = ExtResource("1_2q7pt")
+region = Rect2(0, 0, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drlfo"]
+atlas = ExtResource("1_2q7pt")
+region = Rect2(0, 25, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gwbqn"]
+atlas = ExtResource("1_2q7pt")
+region = Rect2(0, 50, 25, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou31c"]
+atlas = ExtResource("1_2q7pt")
+region = Rect2(0, 75, 25, 25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oxjlj"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_5057l")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_drlfo")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_gwbqn")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_ou31c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_mcyhs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+top_level = true
+sprite_frames = SubResource("SpriteFrames_oxjlj")
+frame_progress = 0.632413
