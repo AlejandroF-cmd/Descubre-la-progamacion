@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5fqrxb7wtb5x"]
+
+[ext_resource type="Texture2D" uid="uid://qn1ktf0y3yj8" path="res://imágenes/pixil-frame-0 (5).png" id="1_klcds"]
+[ext_resource type="Script" path="res://código/moneda.gd" id="1_kxpkv"]
+[ext_resource type="Texture2D" uid="uid://chc3u0ugy44nh" path="res://imágenes/pixil-frame-0 (1).png" id="2_dy0vv"]
+[ext_resource type="Texture2D" uid="uid://fibm7plsofl1" path="res://imágenes/pixil-frame-0 (4).png" id="3_nwllm"]
+[ext_resource type="Texture2D" uid="uid://d165wvjnwlapp" path="res://imágenes/pixil-frame-0 (3).png" id="4_72h36"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7we65"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yosj0"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": ExtResource("1_klcds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dy0vv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nwllm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_72h36")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_dy0vv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="moneda" type="Node2D"]
+script = ExtResource("1_kxpkv")
+
+[node name="StaticBody2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_7we65")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yosj0")
+
+[connection signal="body_entered" from="StaticBody2D" to="." method="_on_static_body_2d_body_entered"]
