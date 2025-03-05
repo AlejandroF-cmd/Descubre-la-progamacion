@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2024tb44k6t2"]
+
+[ext_resource type="Script" path="res://código/Pincho.gd" id="1_b46f4"]
+[ext_resource type="Texture2D" uid="uid://bxoj5tin56mgh" path="res://imágenes/pincho.png" id="2_wu2is"]
+
+[node name="Pincho" type="Node2D"]
+script = ExtResource("1_b46f4")
+
+[node name="area2d" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="area2d"]
+position = Vector2(1.00001, 0)
+scale = Vector2(28.125, 39.5625)
+polygon = PackedVector2Array(1, -1, 2, 0, 0, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(28, -7)
+scale = Vector2(0.73, 1)
+texture = ExtResource("2_wu2is")
+
+[connection signal="area_entered" from="area2d" to="." method="_on_area_2d_area_entered"]
