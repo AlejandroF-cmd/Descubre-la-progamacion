@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0th4ancv03tl"
+path="res://.godot/imported/créditos music.mp3-6c5e81f113326359243d93cc6f8be992.mp3str"
+
+[deps]
+
+source_file="res://créditos music.mp3"
+dest_files=["res://.godot/imported/créditos music.mp3-6c5e81f113326359243d93cc6f8be992.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

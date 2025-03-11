@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://edtikyfof1p5"
+path="res://.godot/imported/música juego.mp3-4137102ed09d7ad5be24c34cbdcd0455.mp3str"
+
+[deps]
+
+source_file="res://música juego.mp3"
+dest_files=["res://.godot/imported/música juego.mp3-4137102ed09d7ad5be24c34cbdcd0455.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

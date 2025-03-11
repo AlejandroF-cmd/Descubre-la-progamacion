@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://dmjcdhnt3rigu"]
+
+[ext_resource type="Script" path="res://código/Créditos.gd" id="1_nrkot"]
+[ext_resource type="Texture2D" uid="uid://c4s6m80ji4sys" path="res://imágenes/5_71.png" id="2_item7"]
+[ext_resource type="AudioStream" uid="uid://b0th4ancv03tl" path="res://créditos music.mp3" id="3_dcngg"]
+
+[node name="Créditos" type="Node2D"]
+script = ExtResource("1_nrkot")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Volver"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+texture = ExtResource("2_item7")
+expand_mode = 1
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 329.0
+offset_top = 473.0
+offset_right = 797.0
+offset_bottom = 596.0
+text = "
+											 Hecho por
+										Alejandro Ferrer"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_dcngg")
+autoplay = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

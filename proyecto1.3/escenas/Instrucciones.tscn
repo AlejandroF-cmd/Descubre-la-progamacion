@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3spvfs2pr8qy"]
+
+[ext_resource type="Script" path="res://código/Instrucciones.gd" id="1_af240"]
+[ext_resource type="Texture2D" uid="uid://bk8xdc0g4wqck" path="res://imágenes/6f9d664486ad30e498dd8b0adba500f3.jpg" id="2_378sm"]
+
+[node name="Instrucciones" type="Node2D"]
+script = ExtResource("1_af240")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Volver"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+offset_right = 1152.0
+offset_bottom = 648.0
+mouse_filter = 2
+texture = ExtResource("2_378sm")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 410.0
+offset_top = 170.0
+offset_right = 612.0
+offset_bottom = 472.0
+text = "
+
+Saltar                 Espacio
+
+Agachar             Control
+
+Derecha             ->
+
+Izquierda           <-"
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+offset_left = 612.0
+offset_top = 170.0
+offset_right = 814.0
+offset_bottom = 472.0
+text = "
+
+Atq Normal        Mouse1
+
+Atq Especial       Mouse2
+
+Objeto                 E
+
+Esquivar              Shift"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
